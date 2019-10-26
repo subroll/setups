@@ -2,7 +2,7 @@
 call plug#begin('~/.vim/plugged')
 
 " theme
-Plug 'doums/darcula'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " ui 
 Plug 'vim-airline/vim-airline'
@@ -28,6 +28,7 @@ else
   Plug 'roxma/vim-hug-neovim-rpc' " rpc
 endif
 Plug 'ervandew/supertab'
+Plug 'SirVer/ultisnips'
 
 " language plugin
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -53,7 +54,7 @@ set backspace=2
 set list
 set listchars=tab:\|\ ,trail:·
 set completeopt-=preview
-colorscheme darcula
+colorscheme dracula
 filetype plugin on
 filetype indent on
 " if has("patch-8.1.1904")
@@ -89,7 +90,7 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
-let g:airline_theme='deus'
+let g:airline_theme='dracula'
 
 "----[ deoplete settings ]-----------------------
 let g:deoplete#enable_at_startup = 1
