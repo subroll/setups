@@ -111,8 +111,10 @@ let g:go_info_mode = 'gopls'
 let g:go_fmt_command = "goimports"
 let g:go_list_type = 'quickfix'
 let g:go_auto_sameids = 1
-let g:go_gocode_unimported_packages = 1
 let g:go_auto_type_info = 1
+let g:go_gocode_autobuild = 1
+let g:go_gocode_propose_source = 1
+let g:go_gocode_unimported_packages = 1
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 
 "----[ supertab settings ]----------------------
