@@ -1,4 +1,4 @@
-"----[ start plugins ]---------------------------
+"----[ start plugins ]-------------------------------------
 call plug#begin('~/.vim/plugged')
 
 " theme
@@ -37,9 +37,9 @@ Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 " initialize plugin system
 call plug#end()
 
-"----[ end plugins ]-----------------------------
+"----[ end plugins ]---------------------------------------
 
-"----[ general settings ]------------------------
+"----[ general settings ]----------------------------------
 syntax on
 set title relativenumber
 set ignorecase smartcase
@@ -62,10 +62,10 @@ filetype indent on
 "   set completepopup=align:menu,border:off,highlight:Pmenu
 " endif
 
-"----[ delimitMate settings ]-------------------
+"----[ delimitMate settings ]------------------------------
 let delimitMate_expand_cr = 1
 
-"----[ airline settings ]-----------------------
+"----[ airline settings ]----------------------------------
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
@@ -92,7 +92,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 let g:airline_theme='dracula'
 
-"----[ deoplete settings ]-----------------------
+"----[ deoplete settings ]---------------------------------
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 call deoplete#custom#option({
@@ -100,12 +100,12 @@ call deoplete#custom#option({
 \ 'auto_refresh_delay': 10,
 \})
 
-"----[ git gutter settings ]---------------------
+"----[ git gutter settings ]-------------------------------
 highlight GitGutterAdd    guifg=#009900 guibg=NONE ctermfg=2 ctermbg=NONE
 highlight GitGutterChange guifg=#bbbb00 guibg=NONE ctermfg=3 ctermbg=NONE
 highlight GitGutterDelete guifg=#ff2222 guibg=NONE ctermfg=1 ctermbg=NONE
 
-"----[ vim-go settings ]-------------------------
+"----[ vim-go settings ]-----------------------------------
 let g:go_def_mode = 'gopls'
 let g:go_info_mode = 'gopls'
 let g:go_fmt_command = "goimports"
@@ -118,10 +118,10 @@ let g:go_gocode_propose_source = 1
 let g:go_gocode_unimported_packages = 1
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 
-"----[ supertab settings ]----------------------
+"----[ supertab settings ]---------------------------------
 let g:SuperTabDefaultCompletionType = '<c-n>'
 
-"----[ key mappings ]------------------------------
+"----[ key mappings ]--------------------------------------
 " map : to ; in normal mode to aviod pressing SHIFT
 nnoremap ; :
 
