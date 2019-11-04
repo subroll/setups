@@ -33,6 +33,7 @@ Plug 'SirVer/ultisnips'
 " language plugin
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } | Plug 'davinche/godown-vim'
 
 " initialize plugin system
 call plug#end()
@@ -61,6 +62,9 @@ filetype indent on
 "   set completeopt+=popup
 "   set completepopup=align:menu,border:off,highlight:Pmenu
 " endif
+
+" keep cursor in center of screen
+set scrolloff=40 showmode showcmd hidden wildmode=list:longest
 
 "----[ delimitMate settings ]------------------------------
 let delimitMate_expand_cr = 1
@@ -120,6 +124,14 @@ autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 
 "----[ supertab settings ]---------------------------------
 let g:SuperTabDefaultCompletionType = '<c-n>'
+
+"----[ markdown settings ]---------------------------------
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_folding_disabled = 1
+
+"----[ godown settings ]-----------------------------------
+let g:godown_autorun = 1
+let g:godown_port = 7331
 
 "----[ key mappings ]--------------------------------------
 " map : to ; in normal mode to aviod pressing SHIFT
