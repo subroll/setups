@@ -64,7 +64,7 @@ filetype indent on
 " endif
 
 " keep cursor in center of screen
-" set scrolloff=40 showmode showcmd hidden wildmode=list:longest
+set scrolloff=40 showmode showcmd hidden wildmode=list:longest
 
 "----[ delimitMate settings ]------------------------------
 let delimitMate_expand_cr = 1
@@ -120,7 +120,7 @@ let g:go_metalinter_autosave = 1
 let g:go_highlight_functions = 1
 let g:go_gocode_propose_source = 1
 let g:go_gocode_unimported_packages = 1
-let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck']
+" let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck']
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 
 "----[ supertab settings ]---------------------------------
