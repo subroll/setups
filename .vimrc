@@ -71,14 +71,14 @@ let delimitMate_expand_cr = 1
 
 "----[ airline settings ]----------------------------------
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 " let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
+" let g:airline_left_sep = '▶'
 " let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
+" let g:airline_right_sep = '◀'
 " let g:airline_symbols.linenr = '␊'
 " let g:airline_symbols.linenr = '␤'
 " let g:airline_symbols.linenr = '¶'
@@ -86,7 +86,7 @@ let g:airline_right_sep = '◀'
 let g:airline_symbols.paste = 'ρ'
 " let g:airline_symbols.paste = 'Þ'
 " let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
+" let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
@@ -110,6 +110,7 @@ highlight GitGutterChange guifg=#bbbb00 guibg=NONE ctermfg=3 ctermbg=NONE
 highlight GitGutterDelete guifg=#ff2222 guibg=NONE ctermfg=1 ctermbg=NONE
 
 "----[ vim-go settings ]-----------------------------------
+let g:go_bin_path = $GOPATH.'/bin'
 let g:go_def_mode = 'gopls'
 let g:go_info_mode = 'gopls'
 let g:go_fmt_command = "goimports"
@@ -140,3 +141,8 @@ nnoremap ; :
 
 " NERDTree toggle
 nnoremap <C-g> :NERDTreeToggle<CR>
+
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
